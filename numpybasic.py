@@ -62,6 +62,9 @@ d[1, 1, 1, 0]
 #slicing subarrays
 ndarray[start:stop:step, ::, ::] #-1 step means reversed array. A double colon means the whole array.
 d[1, 1, 1,::-1]
+#ellipsis -> python object that can be used to slice higher dimensional arrays
+d[1,...] #select all the dimensions after the first dimension
+d[...,1] #select all the dimensions before the last dimension
 #assigments are possible. Numpy would convert assigned data automatically. 
 d[1, 1, 1 , ::-1] = np.array([1, 2])
 d.dtype #int64
